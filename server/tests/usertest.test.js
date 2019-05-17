@@ -27,3 +27,27 @@ describe('SIGNUP USER TEST', () => {
   });
  
 });
+
+describe('SIGNIN USER TEST', () => {
+  it('Should log in into account', (done) => {
+    const user = {
+      email: 'schellamugabekazi76@gmail.com',
+      password: '12345',
+    };
+
+    chai.request(server)
+      .post('/api/v1/auth/signin')
+      .send(user)
+      .end((err, res) => {
+        res.body.should.be.an('object');
+        res.body.should.have.status(200);
+        res.body.should.have.property('status');
+        // res.body.should.have.property('data');
+        // res.body.data.should.be.a('array');
+        done();
+      });
+  });
+ 
+});
+
+
