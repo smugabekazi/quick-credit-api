@@ -83,8 +83,8 @@ describe('get all loans', () => {
         res.body.should.be.an('object');
         res.body.should.have.status(200);
         res.body.should.have.property('status');
-        // res.body.should.have.property('data');
-        // res.body.data.should.be.a('array');
+        res.body.should.have.property('data');
+        res.body.data.should.be.a('array');
         done();
       });
   });
