@@ -3,6 +3,8 @@ import bodyParser from 'body-parser';
 import userRoute from './routes/userRoute';
 import loanRoute from './routes/loanRoute';
 import repayment from './routes/repaymentRoute';
+// import pool from './models/connectdb';
+import createTables from './models/createtableQuery'
 
 const app = express();
 app.use(bodyParser.json());
@@ -14,6 +16,7 @@ app.use('*',(req,res)=>res.status(404).json({
     status:404,
     error:'Wrong URL!'
 }));
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, ()=>{

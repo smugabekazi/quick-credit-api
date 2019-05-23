@@ -20,31 +20,31 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">82.35% </span>
+        <span class="strong">17.65% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>14/17</span>
+        <span class='fraction'>3/17</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">50% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>3/6</span>
+        <span class='fraction'>0/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">0% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>3/3</span>
+        <span class='fraction'>0/3</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">86.67% </span>
+        <span class="strong">20% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>13/15</span>
+        <span class='fraction'>3/15</span>
       </div>
     </div>
     <p class="quiet">
       Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
     </p>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -74,26 +74,27 @@
 <a name='L26'></a><a href='#L26'>26</a>
 <a name='L27'></a><a href='#L27'>27</a>
 <a name='L28'></a><a href='#L28'>28</a>
-<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -101,27 +102,27 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import userdb from "../../models/userdb";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
+import userdb from "../../models/userdb";
 import validateUser from "../../helpers/validation";
 import jwtToken from "../../helpers/jwtToken";
 &nbsp;
 class SigninController {
-  static signin(req, res) {
-    const { error } = validateUser.userSignin(req.body);
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (error) <span class="cstat-no" title="statement not covered" >return r</span>es.status(400).json(error.details[0].message);
-    const userEmail = userdb.find(user =&gt; user.email === req.body.email);
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (!userEmail) {
+  static signin(<span class="fstat-no" title="function not covered" >req, r</span>es) <span class="cstat-no" title="statement not covered" >{</span>
+    const { error } = <span class="cstat-no" title="statement not covered" >validateUser.u</span>serSignin(req.body);
+<span class="cstat-no" title="statement not covered" >    if (error) <span class="cstat-no" title="statement not covered" >return r</span></span>es.status(400).json(error.details[0].message);
+    const userEmail = <span class="cstat-no" title="statement not covered" >userdb.f</span>ind(<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >user =&gt; u</span></span>ser.email === req.body.email);
+<span class="cstat-no" title="statement not covered" >    if (!userEmail) {</span>
 <span class="cstat-no" title="statement not covered" >      return r</span>es.status(404).json("Invalid Username or password ");
     }
-    const validPassword = userdb.find(
-      user =&gt; user.password === req.body.password
+    const validPassword = <span class="cstat-no" title="statement not covered" >userdb.f</span>ind(
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >      user =&gt; u</span></span>ser.password === req.body.password
     );
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (!validPassword) {
+<span class="cstat-no" title="statement not covered" >    if (!validPassword) {</span>
 <span class="cstat-no" title="statement not covered" >      return r</span>es.status(404).json("Invalid Username or password ");
     }
-    const token = jwtToken.generateToken(userEmail.id);
-    return res.status(200).json({
+    const token = <span class="cstat-no" title="statement not covered" >jwtToken.g</span>enerateToken(userEmail.id);
+<span class="cstat-no" title="statement not covered" >    return r</span>es.status(200).json({
       status: 200,
       message: "Welcome! Login successful",
       token
@@ -129,14 +130,13 @@ class SigninController {
   }
 }
 &nbsp;
-export default SigninController;
-&nbsp;</pre></td></tr>
+export default SigninController;</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon May 20 2019 12:36:38 GMT+0200 (Eastern European Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue May 21 2019 14:07:34 GMT+0200 (Eastern European Standard Time)
 </div>
 </div>
 <script src="..\..\..\prettify.js"></script>

@@ -4,9 +4,12 @@
   "description": "Quick Credit is an online lending platform that provides short term soft loans to individuals. This helps solve problems of financial inclusion as a way to alleviate poverty and empower low income earners.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/index.js --exec babel-node --",
+    "start": "nodemon  --exec babel-node server/index",
     "test": "nyc --reporter=html --reporter=text mocha ./server/tests/*js --require babel-polyfill --require babel-register --timeout 10000 --exit",
-    "test:coveralls": "nyc report --reporter=text-lcov | coveralls"
+    "test:coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "create": "node --require babel-register ./server/models/createtable.js createTables",
+    "data":"node server/models/connectdb.js",
+    "delete": "node --require babel-register ./server/models/createtable.js deleteTables"
   },
   "repository": {
     "type": "git",
@@ -17,6 +20,8 @@
   "bugs": {
     "url": "https://github.com/smugabekazi/quick-credit-api/issues"
   },
+  
+  
   "homepage": "https://github.com/smugabekazi/quick-credit-api#readme",
   "dependencies": {
     "babel-cli": "^6.26.0",
@@ -27,7 +32,9 @@
     "joi": "^14.3.1",
     "joi-phone-number": "^2.1.1",
     "jsonwebtoken": "^8.5.1",
-    "moment": "^2.24.0"
+    "moment": "^2.24.0",
+    "pg": "^7.11.0",
+    "swagger-ui-express": "^4.0.4"
   },
   "devDependencies": {
     "babel-polyfill": "^6.26.0",
