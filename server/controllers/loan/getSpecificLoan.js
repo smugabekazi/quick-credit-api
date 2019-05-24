@@ -1,20 +1,23 @@
-import loandb from '../../models/loandb';
+import Loans from '../../models/Loan';
 
 class LoanController{
-    getSpecificLoan(req,res){
-        const id = parseInt(req.params.id, 10);
-        loandb.map(loan=>{
-            if(loan.id===id){
-                return res.status(200).send({
-                    status:200,
-                    message:'loan retrieved successfully',
-                    data:loan,
-                });
-            }
-        });
-        return res.status(404).json({
-            status:404,
-            error:"loan not found",
+   async getSpecificLoan(req,res){
+        if(isNaN(req.params.id)){
+            return res.status(400).json({
+                status:400,
+                error:"loan must be an integer",
+            });
+        }
+        const loanResult = await Loans.getOneLoan(req.params.id);
+        if(loanResult.length===0){
+            return res.status().json({
+                status: 404,
+                data: 'loan not found',
+            });
+        }
+        return res.status(200).json({
+            status: 200,
+            data: loanResult
         });
     }
 }
