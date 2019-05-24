@@ -14,7 +14,7 @@ class UserController {
     if(userExist.rowCount>0){
       return res.status(409).json({
         status:409,
-        error: 'This email has already been taken',
+        error: 'User with this email exists',
       });
     }
 
