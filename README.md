@@ -48,6 +48,5 @@ address.
 - API Repository link: https://github.com/smugabekazi/quick-credit-api
 - Pivot Tracker Story link: https://www.pivotaltracker.com/n/projects/2331858 
 - GitHub Page link: https://smugabekazi.github.io/quick-credit/UI/homepage
--Database(postgress Link):
 ## AUTHOR
  Schella Mugabekazi
